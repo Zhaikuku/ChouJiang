@@ -1,0 +1,20 @@
+ USE [WinForm_Tese]
+GO
+/****** Object:  Table [dbo].[UserInfo]    Script Date: 2020/9/10 0:10:15 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE TABLE [dbo].[UserInfo](
+	[Id] [int] IDENTITY(1,1) NOT NULL,
+	[Name] [varchar](10) NOT NULL,
+	[is_luck] [varchar](5) NULL,
+	[is_join] [int] NULL,
+ CONSTRAINT [PK_UserInfo] PRIMARY KEY CLUSTERED 
+(
+	[Id] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+) ON [PRIMARY]
+GO
+
+-- ODBC连接参数配置文件   DBHelper.cs 
